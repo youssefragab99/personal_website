@@ -1,0 +1,46 @@
+:root {
+  /* Terminal Colors - GitHub Dark inspired */
+  --term-bg: #0d1117;
+  --term-bg-alt: #161b22;
+  --term-text: #c9d1d9;
+  --term-text-muted: #8b949e;
+  --term-green: #3fb950;
+  --term-blue: #58a6ff;
+  --term-purple: #bc8cff;
+  --term-yellow: #d29922;
+  --term-red: #f85149;
+  --term-cyan: #39c5cf;
+  --term-orange: #f0883e;
+
+  /* Prompt Colors */
+  --prompt-user: var(--term-green);
+  --prompt-at: var(--term-text-muted);
+  --prompt-host: var(--term-purple);
+  --prompt-path: var(--term-blue);
+  --prompt-symbol: var(--term-text);
+
+  /* UI */
+  --term-border: #30363d;
+  --term-selection: rgba(56, 139, 253, 0.4);
+  --term-cursor: var(--term-green);
+
+  /* Window Chrome */
+  --window-btn-red: #ff5f56;
+  --window-btn-yellow: #ffbd2e;
+  --window-btn-green: #27c93f;
+
+  /* Typography */
+  --font-mono: 'Fira Code', 'JetBrains Mono', 'Cascadia Code', 'SF Mono', 'Consolas', monospace;
+  --font-size: 14px;
+  --line-height: 1.6;
+
+  /* Animation */
+  --typing-speed: 20ms;
+  --cursor-blink: 1s;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --font-size: 12px;
+  }
+}

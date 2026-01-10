@@ -1,0 +1,122 @@
+\documentclass[11pt,letterpaper]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx} % Times New Roman font
+\usepackage[margin=0.5in]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+
+% Remove page numbers
+\pagenumbering{gobble}
+
+% Hyperlink setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+}
+
+% Section formatting - underlined headers
+\titleformat{\section}
+    {\normalfont\large\bfseries}
+    {}
+    {0em}
+    {}
+    [\titlerule]
+
+\titlespacing*{\section}{0pt}{12pt}{6pt}
+
+% Reduce spacing in lists
+\setlist[itemize]{noitemsep, topsep=2pt, leftmargin=*}
+
+% Custom commands
+\newcommand{\projectheader}[2]{\textbf{#1} \textit{(#2):}}
+
+\begin{document}
+
+%====================
+% HEADER
+%====================
+\begin{center}
+    {\LARGE \textbf{Youssef Ragab}}\\[4pt]
+    2301 E St NW, Washington, DC, 20037\textbar\ 857-308-8669\\[2pt]
+    \href{mailto:yragab99@gmail.com}{yragab99@gmail.com} \textbar\ 
+    \href{https://linkedin.com/in/yragab}{linkedin.com/in/yragab} \textbar\
+    \href{https://github.com/yragab}{github.com/yragab}
+\end{center}
+
+%====================
+% PROFESSIONAL SUMMARY
+%====================
+\section*{PROFESSIONAL SUMMARY}
+Results-driven AI/Machine Learning Engineer with 4+ years of experience designing, developing, and deploying production-grade AI systems in high-stakes fintech environments. Proven expertise in fine-tuning Large Language Models (LLMs) and building scalable MLOps pipelines on cloud platforms (AWS/Azure). Passionate about leveraging Generative AI to drive intelligent automation, enhance data analytics, and build robust enterprise solutions. At Verituity, architected and deployed ML models that now secure over \$7B in transactions.
+
+%====================
+% TECHNICAL SKILLS
+%====================
+\section*{TECHNICAL SKILLS}
+\begin{itemize}
+    \item \textbf{Languages:} Python, SQL, Go, R, Java, Shell Scripting
+    \item \textbf{AI/ML Frameworks:} PyTorch, TensorFlow, Scikit-learn, Pandas, NumPy, NLTK
+    \item \textbf{GenAI \& NLP:} Large Language Models (LLMs), Fine-Tuning, OpenAI API, Anomaly Detection, Ensemble Methods
+    \item \textbf{Cloud \& MLOps:} AWS, Azure, Docker, Kubernetes, CI/CD, Kafka, Dagster, Azure ML Studio
+    \item \textbf{APIs \& Databases:} REST, gRPC, FastAPI, PostgreSQL (SQL), NoSQL
+    \item \textbf{Developer Tools:} Git, Power BI, Apache Spark, Hadoop
+\end{itemize}
+
+%====================
+% PROFESSIONAL EXPERIENCE
+%====================
+\section*{PROFESSIONAL EXPERIENCE}
+
+\noindent\textbf{Verituity} -- Machine Learning Engineer \hfill 2022 -- Present\\
+\textit{McLean, VA}
+\begin{itemize}
+    \item Architected and deployed over 25 production-grade machine learning models for identity verification and fraud detection, directly contributing to the platform's capacity to securely process over \$7B in transactions.
+    \item Engineered and maintained scalable APIs (REST, gRPC) to serve model predictions, integrating AI capabilities into core enterprise backend systems and data pipelines.
+    \item Developed a Generative AI solution by fine-tuning an LLM for context-based anomaly detection in financial data, achieving 100\% machine-readable JSON output for automated decision support.
+    \item Implemented and managed a cloud-native MLOps workflow using Docker, Kafka, and Dagster on AWS/Azure, automating model training and deployment pipelines and reducing retraining time by over 80\%.
+    \item Collaborated with cross-functional product and engineering teams to translate business requirements into robust, AI-driven features, from ideation and prototyping to production deployment.
+\end{itemize}
+
+%====================
+% PROJECTS
+%====================
+\section*{PROJECTS}
+
+\projectheader{Production-Grade AI Fraud Detection System}{Python, FastAPI, gRPC, Docker, PostgreSQL, AWS}
+\begin{itemize}
+    \item Designed and deployed a suite of ML models for real-time fraud and identity risk prediction, achieving over 90\% accuracy. Built scalable API endpoints for seamless integration into the enterprise platform.
+    \item Engineered an automated model execution system using Kafka and Dagster, enabling end-to-end ownership by the data science team and reducing dependency on platform engineers.
+\end{itemize}
+
+\projectheader{Generative AI for Anomaly Detection}{Python, LLM Fine-Tuning, OpenAI API, PostgreSQL}
+\begin{itemize}
+    \item Fine-tuned a Large Language Model (LLM) to identify anomalies in platform financial data, creating a powerful tool for intelligent automation and decision support.
+    \item Engineered a Python package to enforce structured JSON responses, enabling reliable integration with automated workflow and decision-support systems.
+\end{itemize}
+
+\projectheader{MLOps Automation Pipeline}{Python, Scikit-learn, Azure ML Studio, Docker, CI/CD}
+\begin{itemize}
+    \item Built an end-to-end automated pipeline for feature engineering, model training, and experimentation. Leveraged Docker and CI/CD practices to ensure reproducible and efficient model lifecycle management.
+    \item Decreased time-to-retrain and deploy a new model by over 80\% through robust automation.
+\end{itemize}
+
+%====================
+% EDUCATION
+%====================
+\section*{EDUCATION}
+
+\noindent\textbf{Master of Science in Business Analytics} \hfill May 2022\\
+The George Washington University, Washington, DC\\
+Concentration: Business Analytics\vspace{8pt}\\
+
+\noindent\textbf{Bachelor of Business Administration} \hfill May 2021\\
+The George Washington University, Washington, DC\\
+Concentration: Business Analytics, Marketing; Minor: Statistics
+
+\end{document}

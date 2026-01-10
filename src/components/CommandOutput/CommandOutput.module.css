@@ -1,0 +1,245 @@
+.output {
+  margin-bottom: 16px;
+}
+
+.ascii {
+  color: var(--term-green);
+  font-size: 0.7em;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  overflow-x: auto;
+}
+
+@media (max-width: 600px) {
+  .ascii {
+    font-size: 0.4em;
+  }
+}
+
+.title {
+  margin-bottom: 12px;
+  font-size: 1.1em;
+}
+
+.highlight {
+  color: var(--term-green);
+  font-weight: bold;
+}
+
+.company {
+  color: var(--term-purple);
+}
+
+.muted {
+  color: var(--term-text-muted);
+}
+
+.summary {
+  margin-bottom: 16px;
+}
+
+.summaryItem {
+  margin-bottom: 4px;
+}
+
+.bullet {
+  color: var(--term-green);
+  margin-right: 8px;
+}
+
+.hint {
+  color: var(--term-text-muted);
+  font-style: italic;
+  margin-top: 16px;
+}
+
+.command {
+  color: var(--term-yellow);
+  font-style: normal;
+}
+
+/* Skills */
+.skillCategory {
+  margin-bottom: 12px;
+}
+
+.categoryName {
+  color: var(--term-cyan);
+  margin-bottom: 4px;
+}
+
+.categoryItems {
+  color: var(--term-text);
+  padding-left: 20px;
+}
+
+/* Experience */
+.experienceItem {
+  margin-bottom: 20px;
+}
+
+.experienceHeader {
+  margin-bottom: 8px;
+}
+
+.experienceCompany {
+  color: var(--term-green);
+  font-weight: bold;
+}
+
+.experienceTitle {
+  color: var(--term-purple);
+}
+
+.experiencePeriod {
+  color: var(--term-yellow);
+}
+
+.experienceLocation {
+  color: var(--term-text-muted);
+}
+
+.experienceHighlights {
+  padding-left: 4px;
+}
+
+.experienceHighlight {
+  margin-bottom: 4px;
+  position: relative;
+  padding-left: 16px;
+}
+
+.experienceHighlight::before {
+  content: '>';
+  position: absolute;
+  left: 0;
+  color: var(--term-green);
+}
+
+/* Projects */
+.project {
+  margin-bottom: 20px;
+  padding-left: 4px;
+}
+
+.projectName {
+  color: var(--term-green);
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.projectTech {
+  color: var(--term-text-muted);
+  font-size: 0.9em;
+  margin-bottom: 8px;
+}
+
+.projectTechItem {
+  color: var(--term-cyan);
+}
+
+.projectDescription {
+  padding-left: 16px;
+}
+
+.projectDescItem {
+  margin-bottom: 4px;
+  position: relative;
+  padding-left: 16px;
+}
+
+.projectDescItem::before {
+  content: '-';
+  position: absolute;
+  left: 0;
+  color: var(--term-text-muted);
+}
+
+/* Education */
+.educationItem {
+  margin-bottom: 16px;
+}
+
+.degree {
+  color: var(--term-green);
+  font-weight: bold;
+}
+
+.school {
+  color: var(--term-purple);
+}
+
+.graduation {
+  color: var(--term-yellow);
+}
+
+.educationDetails {
+  padding-left: 16px;
+  color: var(--term-text-muted);
+}
+
+/* Contact */
+.contactItem {
+  margin-bottom: 8px;
+}
+
+.contactLabel {
+  color: var(--term-cyan);
+  display: inline-block;
+  width: 100px;
+}
+
+.contactValue {
+  color: var(--term-text);
+}
+
+.contactLink {
+  color: var(--term-blue);
+}
+
+/* Help */
+.helpTable {
+  margin-bottom: 16px;
+}
+
+.helpRow {
+  display: flex;
+  margin-bottom: 4px;
+}
+
+.helpCommand {
+  color: var(--term-yellow);
+  width: 120px;
+  flex-shrink: 0;
+}
+
+.helpDescription {
+  color: var(--term-text);
+}
+
+.helpTip {
+  color: var(--term-text-muted);
+  font-style: italic;
+  margin-top: 12px;
+}
+
+/* Welcome */
+.welcome {
+  margin-bottom: 8px;
+}
+
+.welcomeTitle {
+  color: var(--term-green);
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* Error */
+.error {
+  color: var(--term-red);
+}
+
+/* Success */
+.success {
+  color: var(--term-green);
+}
