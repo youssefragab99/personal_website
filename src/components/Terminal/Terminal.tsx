@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useTerminal } from '../../hooks/useTerminal';
 import { useBootSequence } from '../../hooks/useBootSequence';
-import { TerminalInput } from './TerminalInput';
+import { TerminalInput, type TerminalInputHandle } from './TerminalInput';
 import { TerminalOutput } from './TerminalOutput';
 import { Welcome } from '../CommandOutput';
 import styles from './Terminal.module.css';
@@ -12,6 +12,7 @@ export function Terminal() {
   const [bootComplete, setBootComplete] = useState(false);
   const { isComplete: bootSequenceComplete, currentStep, messages } = useBootSequence();
   const contentRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<TerminalInputHandle>(null);
 
   const { outputs, executeCommand, navigateHistory } = useTerminal();
 
@@ -33,8 +34,12 @@ export function Terminal() {
     executeCommand(command);
   };
 
+  const handleTerminalClick = () => {
+    inputRef.current?.focus();
+  };
+
   return (
-    <div className={`${styles.windowFrame} ${styles.scanlines}`}>
+    <div className={`${styles.windowFrame} ${styles.scanlines}`} onClick={handleTerminalClick}>
       {/* Title Bar */}
       <div className={styles.titleBar}>
         <div className={styles.trafficLights}>
@@ -83,6 +88,7 @@ export function Terminal() {
 
             {/* Input line */}
             <TerminalInput
+              ref={inputRef}
               onSubmit={executeCommand}
               onNavigateHistory={navigateHistory}
             />

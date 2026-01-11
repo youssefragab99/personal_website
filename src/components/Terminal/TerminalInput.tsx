@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, type KeyboardEvent, type ChangeEvent } from 'react';
+import { useState, useRef, useEffect, forwardRef, useImperativeHandle, type KeyboardEvent, type ChangeEvent } from 'react';
 import { getAutocompleteSuggestions } from '../../commands/parser';
 import styles from './Terminal.module.css';
 
@@ -8,13 +8,21 @@ interface TerminalInputProps {
   disabled?: boolean;
 }
 
-export function TerminalInput({
+export interface TerminalInputHandle {
+  focus: () => void;
+}
+
+export const TerminalInput = forwardRef<TerminalInputHandle, TerminalInputProps>(function TerminalInput({
   onSubmit,
   onNavigateHistory,
   disabled = false,
-}: TerminalInputProps) {
+}, ref) {
   const [input, setInput] = useState('');
   const inputRef = useRef<HTMLInputElement>(null);
+
+  useImperativeHandle(ref, () => ({
+    focus: () => inputRef.current?.focus(),
+  }));
 
   useEffect(() => {
     if (!disabled) {
@@ -79,6 +87,8 @@ export function TerminalInput({
         <span className={styles.promptSymbol}>$</span>
       </span>
       <div className={styles.inputWrapper}>
+        <span className={styles.inputText}>{input}</span>
+        <span className={styles.cursor} aria-hidden="true" />
         <input
           ref={inputRef}
           type="text"
@@ -93,8 +103,7 @@ export function TerminalInput({
           spellCheck={false}
           aria-label="Terminal input"
         />
-        <span className={styles.cursor} aria-hidden="true" />
       </div>
     </div>
   );
-}
+});
